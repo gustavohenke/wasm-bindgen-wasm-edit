@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@webassemblyjs/wasm-edit": "^1.11.6",
+    "@webassemblyjs/wasm-parser": "^1.11.6",
+    "wasm-pack": "^0.12.0"
+  },
+  "scripts": {
+    "wasm": "cargo build --target=wasm32-unknown-unknown --lib",
+    "bg": "wasm-bindgen --no-typescript --out-dir bg target/wasm32-unknown-unknown/debug/mylib.wasm"
+  }
+}
