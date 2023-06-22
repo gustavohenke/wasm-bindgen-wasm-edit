@@ -14,6 +14,7 @@ const visitors = {
 
 let bin;
 if (mode === 'ast') {
+    // This is exactly what `edit` does internally, except that it also calls shrinkPaddedLEB128
     const ast = decode(origBin);
     bin = editWithAST(ast, origBin, visitors);
 } else {
